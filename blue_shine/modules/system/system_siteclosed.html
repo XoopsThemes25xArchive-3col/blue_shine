@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<title><{$sitename}></title>
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+</head>
+<body>
+<table cellspacing="0" id="Main" align="center">
+    <tr>
+      <td><table width="100%"  border="0" cellspacing="0" cellpadding="0" id="header">
+        <tr>
+          <td id="logo"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="<{$xoops_imageurl}>images/logo.gif" alt="" width="190" height="36" /></td>
+  </tr>
+  <tr>
+    <td id="slogan"><{$xoops_slogan}></td>
+  </tr>
+</table></td>
+          <td class="headerImg">&nbsp;</td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td>
+	  <table cellspacing="0" cellpadding="0" width="100%" border="0" id="menu">
+                <tr align="center"> 
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/index.php">Home</a></td>
+                  <td class="separator"></td>
+                  <td id="headmenu" ><a class="menuHead" href="<{$xoops_url}>/modules/news/">News</a></td>
+                  <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/wfdownloads/">Downloads</a></td>
+                  <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/newbb/">Forum</a></td>
+                  <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/article/">Articles</a></td>
+                  <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/mylinks/">Links</a> </td>
+ <!-- if you want to add more links take the uncomment the needed lines below and customize the links -->              
+<!--              <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/mylinks/">Links</a> </td>
+                  <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/mylinks/">Links</a> </td>
+                  <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/mylinks/">Links</a> </td>
+                  <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/mylinks/">Links</a> </td>
+                  <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/mylinks/">Links</a> </td>
+                  <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/mylinks/">Links</a> </td>
+ -->				</tr>
+      </table>
+	  </td>
+    </tr>
+    <tr>
+	  <{if $xoops_showlblock == 1}>      <{/if}>
+      <td id="centercolumn"  style="padding-top:40px; padding-bottom:90px; ">
+  <table cellspacing="1" align="center" width="80%" border="0" cellpadding="10px;">
+    <tr>
+      <td align="center"><div style="color: #136C99; text-align: center; font-weight: bold; padding: 10px;"><h3><{$lang_siteclosemsg}></h3></div></td>
+    </tr>
+  </table>
+  
+  <form action="<{$xoops_url}>/user.php" method="post">
+    <table cellspacing="0" align="center" style="width: 200px;">
+      <tr>
+      </tr>
+      <tr>
+        <td style="padding: 2px;"><{$lang_username}></td><td style="padding: 2px;"><input type="text" name="uname" size="12" value="" /></td>
+      </tr>
+      <tr>
+        <td style="padding: 2px;"><{$lang_password}></td><td style="padding: 2px;"><input type="password" name="pass" size="12" /></td>
+      </tr>
+      <tr>
+        <td style="padding: 2px;">&nbsp;</td>
+        <td style="padding: 2px;">
+        	<input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
+        	<input type="hidden" name="xoops_login" value="1" />
+        	<input type="submit" value="<{$lang_login}>" /></td>
+      </tr>
+    </table>
+  </form>    </tr>
+    <tr>
+      <td class="footer">Copyright &copy; 2006. All rights reserved. Your Company. Theme by<a href="http://www.xoopsdesign.com"> XOOPSDesign.com</a><br />
+      <{$xoops_footer}></td>
+    </tr>
+</table>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<link href="style.css" rel="stylesheet" type="text/css" />
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<!-- START HEADER-->
+<table width="100%"  border="0" cellspacing="0" cellpadding="0" id="header" align="center">
+        <tr>
+          <td id="logo"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><img src="<{$xoops_imageurl}>images/logo.gif" alt=""  /></td>
+              </tr>
+              <tr>
+                <td id="slogan"><{$xoops_slogan}></td>
+              </tr>
+          </table></td>
+          <td class="headerImg"></td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td>
+	<table cellspacing="0" cellpadding="0" width="100%" border="0" id="menu" align="center">
+        <tr align="center">
+          <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/index.php">Home</a></td>
+          <td class="separator"></td>
+          <td id="headmenu" ><a class="menuHead" href="<{$xoops_url}>/modules/news/">News</a></td>
+          <td class="separator"></td>
+          <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/wfdownloads/">Downloads</a></td>
+          <td class="separator"></td>
+          <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/newbb/">Forum</a></td>
+          <td class="separator"></td>
+          <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/article/">Articles</a></td>
+          <td class="separator"></td>
+          <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/mylinks/">Links</a> </td>
+          <!-- if you want to add more links take the uncomment the needed lines below and customize the links -->
+          <!--              <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/mylinks/">Links</a> </td>
+                  <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/mylinks/">Links</a> </td>
+                  <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/mylinks/">Links</a> </td>
+                  <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/mylinks/">Links</a> </td>
+                  <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/mylinks/">Links</a> </td>
+                  <td class="separator"></td>
+                  <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/mylinks/">Links</a> </td>
+ -->
+        </tr>
+    </table>
+
+<table cellspacing="0" id="Main" align="center">
+    <tr>
+	  <{if $xoops_showlblock == 1}>
+      <td id="leftcolumn">
+        <!-- Start left blocks loop -->
+        <{foreach item=block from=$xoops_lblocks}>
+          <{include file="$xoops_theme/theme_blockleft.html"}>
+        <{/foreach}>
+        <!-- End left blocks loop -->      </td>
+     <{/if}>
+      <td id="centercolumn">
+        <!-- Display center blocks if any -->
+<div id="banner"><{$xoops_banner}></div>
+<{if $xoops_showcblock == 1}>
+  <table cellspacing="0" class="centercol">
+    <tr>
+      <td id="centerCcolumn" colspan="2">
+        <!-- Start center-center blocks loop -->
+<{foreach item=block from=$xoops_ccblocks}> <{include file="$xoops_theme/theme_blockcenter_c.html"}> <{/foreach}>
+        <!-- End center-center blocks loop -->      </td>
+    </tr>
+    <tr>
+      <td id="centerLcolumn">
+        <!-- Start center-left blocks loop -->
+<{foreach item=block from=$xoops_clblocks}> <{include file="$xoops_theme/theme_blockcenter_l.html"}> <{/foreach}>
+        <!-- End center-left blocks loop -->      </td>
+      <td id="centerRcolumn">
+        <!-- Start center-right blocks loop -->
+<{foreach item=block from=$xoops_crblocks}> <{include file="$xoops_theme/theme_blockcenter_r.html"}> <{/foreach}>
+        <!-- End center-right blocks loop -->      </td>
+    </tr>
+  </table>
+<{/if}>
+  <!-- End display center blocks -->
+  <div id="content"> <{$xoops_contents}> </div>
+<{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright or $xoBlocks.page_bottomcenter}>
+  <table cellspacing="0" class="centercol">
+<{if $xoBlocks.page_bottomcenter}>
+    <tr>
+      <td id="bottomCcolumn" colspan="2"> <{foreach from=$xoBlocks.page_bottomcenter item=block}><{include file="$xoops_theme/theme_blockcenter_c.html"}><{/foreach}> </td>
+    </tr>
+<{/if}> <{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright}>
+    <tr>
+      <td id="bottomLcolumn"> <{foreach from=$xoBlocks.page_bottomleft item=block}><{include file="$xoops_theme/theme_blockcenter_l.html"}><{/foreach}> </td>
+      <td id="bottomRcolumn"> <{foreach from=$xoBlocks.page_bottomright item=block}><{include file="$xoops_theme/theme_blockcenter_r.html"}><{/foreach}> </td>
+    </tr>
+<{/if}>
+  </table>
+<{/if}> </td>
+      <{if $xoops_showrblock == 1}>
+
+      <td id="rightcolumn">
+        <!-- Start right blocks loop -->
+        <{foreach item=block from=$xoops_rblocks}>
+          <{include file="$xoops_theme/theme_blockright.html"}>
+        <{/foreach}>
+        <!-- End right blocks loop -->      </td>
+
+      <{/if}>    </tr>
+    <tr>
+      <td colspan="3" class="footer">Copyright &copy; 2006. All rights reserved. Your Company. Theme by<a href="http://www.xoopsdesign.com"> XOOPSDesign.com</a><br />
+      <{$xoops_footer}></td>
+    </tr>
+</table>
+</body>
+</html>
